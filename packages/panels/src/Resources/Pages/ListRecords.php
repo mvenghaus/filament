@@ -345,4 +345,9 @@ class ListRecords extends Page implements Tables\Contracts\HasTable
 
         return [];
     }
+
+    public function updatedPaginators(): void
+    {
+        $this->js('$wire.__instance.el.scrollIntoView()');
+    }
 }
