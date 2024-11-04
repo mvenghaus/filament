@@ -121,6 +121,7 @@
     @endif
     ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc('table', 'filament/tables') }}"
     x-data="table"
+    x-on:table-pagination-changed.window="if ($event.detail.id === '{{ $this->getId() }}') $el.scrollIntoView();"
     @class([
         'fi-ta',
         'animate-pulse' => $records === null,
