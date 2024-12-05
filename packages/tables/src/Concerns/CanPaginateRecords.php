@@ -109,4 +109,9 @@ trait CanPaginateRecords
     {
         return true;
     }
+
+    public function updatedPaginators(): void
+    {
+        $this->dispatch('filament-table-pagination-changed', id: $this->getId());
+    }
 }

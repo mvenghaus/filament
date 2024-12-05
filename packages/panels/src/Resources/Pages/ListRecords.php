@@ -345,9 +345,4 @@ class ListRecords extends Page implements Tables\Contracts\HasTable
 
         return [];
     }
-
-    public function updatedPaginators(): void
-    {
-        $this->dispatch('filament-table-pagination-changed', id: $this->getId());
-    }
 }
